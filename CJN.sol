@@ -16,6 +16,7 @@ contract ClareJituNFT is ERC721, ERC721URIStorage, Ownable {
     }
 
     function _safeMint(address to, string memory tokenUri) public returns (uint256) {
+        tokenUri = "https://ipfs.io/ipfs/bafkreihwjnac7yk4tflrd2dtvnfkskvqodq2cjktsdqyn3owlo7pm5lequ";
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
